@@ -3,7 +3,8 @@ package com.test.locationupdates.model.room
 import androidx.room.TypeConverter
 import java.util.*
 
-// * Converts non-standard objects in the {@link MyLocation} data class into and out of the database.
+// * Converts non-standard objects in the Userlocation
+// entity class into and out of the database.
 class MyLocationTypeConverters {
     @TypeConverter
     fun fromDate(date: Date?): Long? {

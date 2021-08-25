@@ -83,10 +83,11 @@ class MainActivity : AppCompatActivity() {
                     DateUtils.isToday(location.date.time)
                 }
 
-                binding.dbUploads.text = ""+uploadsToday.size
+                binding.dbUploads.text = uploadsToday.size.toString()
 
                 val dateFormatter = SimpleDateFormat("MMM dd,yyyy HH:mm:ss")
 
+                //for getting last inserted location
                 val lastLocation = it.first()
 
                 binding.lastLocation.text = lastLocation.latitude+", "+lastLocation.longitude
