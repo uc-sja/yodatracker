@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LocationUpdates</string>
+    <string name="db_title">No. of DB Uploads Today</string>
+    <string name="update_title">Last Updated Time</string>
+    <string name="start_updates">start location updates</string>
+    <string name="stop_updates">stop location updates</string>
+    <string name="permissionRationale">Location permission required to start location updates</string>
+    <string name="ok">OK</string>
+    <string name="settings">SETTINGS</string>
+    <string name="last_title">Last Location</string>
+</resources>
