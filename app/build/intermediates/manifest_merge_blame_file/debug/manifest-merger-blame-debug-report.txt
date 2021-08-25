@@ -1,0 +1,102 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.test.locationupdates"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:4:5-81
+11-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:4:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:5:5-79
+12-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+13-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:6:5-77
+13-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:6:22-74
+14
+15    <application
+15-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:8:5-29:19
+16        android:allowBackup="true"
+16-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:9:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.6.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/cec9fe7b6132d7b782fe169c802731ab/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:11:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:12:9-54
+22        android:supportsRtl="true"
+22-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:13:9-35
+23        android:theme="@style/Theme.LocationUpdates" >
+23-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:14:9-53
+24        <activity
+24-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:15:9-23:20
+25            android:name="com.test.locationupdates.MainActivity"
+25-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:16:13-41
+26            android:exported="true" >
+26-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:17:13-36
+27            <intent-filter>
+27-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:18:13-22:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:19:17-69
+28-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:19:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:21:17-77
+30-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:21:27-74
+31            </intent-filter>
+32        </activity>
+33
+34        <service
+34-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:27:9-28:55
+35            android:name="com.test.locationupdates.LocationService"
+35-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:27:18-49
+36            android:foregroundServiceType="location" />
+36-->/Users/shikharjaiswal/AndroidStudioProjects/LocationUpdates/app/src/main/AndroidManifest.xml:28:13-53
+37
+38        <activity
+38-->[com.google.android.gms:play-services-base:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/fd577a00b32070b6256d65192255b6d4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+39            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+39-->[com.google.android.gms:play-services-base:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/fd577a00b32070b6256d65192255b6d4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+40            android:exported="false"
+40-->[com.google.android.gms:play-services-base:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/fd577a00b32070b6256d65192255b6d4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+41            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+41-->[com.google.android.gms:play-services-base:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/fd577a00b32070b6256d65192255b6d4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+42
+43        <meta-data
+43-->[com.google.android.gms:play-services-basement:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/ac0f8f471ad16ce95a100974dc883de5/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+44            android:name="com.google.android.gms.version"
+44-->[com.google.android.gms:play-services-basement:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/ac0f8f471ad16ce95a100974dc883de5/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+45            android:value="@integer/google_play_services_version" />
+45-->[com.google.android.gms:play-services-basement:17.5.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/ac0f8f471ad16ce95a100974dc883de5/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+46
+47        <provider
+47-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/1c9717bed59a2f8984eb872115c44c20/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+48            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/1c9717bed59a2f8984eb872115c44c20/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+49            android:authorities="com.test.locationupdates.lifecycle-process"
+49-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/1c9717bed59a2f8984eb872115c44c20/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+50            android:exported="false"
+50-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/1c9717bed59a2f8984eb872115c44c20/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+51            android:multiprocess="true" />
+51-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/1c9717bed59a2f8984eb872115c44c20/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+52
+53        <service
+53-->[androidx.room:room-runtime:2.3.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/dfcca3cfff5a081555adca79649330da/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+54            android:name="androidx.room.MultiInstanceInvalidationService"
+54-->[androidx.room:room-runtime:2.3.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/dfcca3cfff5a081555adca79649330da/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+55            android:directBootAware="true"
+55-->[androidx.room:room-runtime:2.3.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/dfcca3cfff5a081555adca79649330da/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+56            android:exported="false" />
+56-->[androidx.room:room-runtime:2.3.0] /Users/shikharjaiswal/.gradle/caches/transforms-3/dfcca3cfff5a081555adca79649330da/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+57    </application>
+58
+59</manifest>

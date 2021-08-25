@@ -1,0 +1,28 @@
+com/test/locationupdates/BR.java
+ com.test.locationupdates.BR
+com/test/locationupdates/DataBindingTriggerClass.java
+ com.test.locationupdates.DataBindingTriggerClass
+com/test/locationupdates/BuildConfig.java
+ com.test.locationupdates.BuildConfig
+com/test/locationupdates/model/room/LocationDb_Impl.java
+ com.test.locationupdates.model.room.LocationDb_Impl
+ com.test.locationupdates.model.room.LocationDb_Impl$1
+com/test/locationupdates/model/room/UserLocationDao_Impl.java
+ com.test.locationupdates.model.room.UserLocationDao_Impl
+ com.test.locationupdates.model.room.UserLocationDao_Impl$1
+ com.test.locationupdates.model.room.UserLocationDao_Impl$2
+ com.test.locationupdates.model.room.UserLocationDao_Impl$3
+com/test/locationupdates/DataBinderMapperImpl.java
+ com.test.locationupdates.DataBinderMapperImpl
+ com.test.locationupdates.DataBinderMapperImpl$InnerBrLookup
+ com.test.locationupdates.DataBinderMapperImpl$InnerLayoutIdLookup
+com/test/locationupdates/databinding/ActivityMainBinding.java
+ com.test.locationupdates.databinding.ActivityMainBinding
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/test/locationupdates/databinding/ActivityMainBindingImpl.java
+ com.test.locationupdates.databinding.ActivityMainBindingImpl
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
