@@ -69,9 +69,6 @@ class LocationService: Service() {
         locationRepo = LocationRepo(locationDao)
 
 
-//        locationViewModel = ViewModelProvider(this, LocationViewModelFactory(locationRepo))
-//            .get(LocationViewModel::class.java)
-//
         createLocationRequest()
 
         fusedLocationClient1 = LocationServices.getFusedLocationProviderClient(this)
@@ -112,7 +109,7 @@ class LocationService: Service() {
 
     }
 
-    fun createLocationRequest(){
+    private fun createLocationRequest(){
 
         //Simply Fetching the location at the  periodic 30s interval
         locationRequest1 = LocationRequest.create()?.apply {

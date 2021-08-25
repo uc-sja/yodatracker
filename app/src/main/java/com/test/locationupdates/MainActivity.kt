@@ -23,11 +23,9 @@ import com.google.android.material.snackbar.Snackbar
 import com.test.locationupdates.databinding.ActivityMainBinding
 import com.test.locationupdates.model.repository.LocationRepo
 import com.test.locationupdates.model.room.LocationDb
-import com.test.locationupdates.model.room.UserLocation
 import com.test.locationupdates.viewmodel.LocationViewModel
 import com.test.locationupdates.viewmodel.LocationViewModelFactory
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 /*
@@ -81,11 +79,11 @@ class MainActivity : AppCompatActivity() {
         locationViewModel.getLocation().observe(this, Observer {
             if(it.isNotEmpty()){
 
-                val todays_uploads = it.filter {
-                    DateUtils.isToday(it.date.time)
+                val uploadsToday = it.filter { location ->
+                    DateUtils.isToday(location.date.time)
                 }
 
-                binding.dbUploads.text = ""+todays_uploads.size
+                binding.dbUploads.text = ""+uploadsToday.size
 
                 val dateFormatter = SimpleDateFormat("MMM dd,yyyy HH:mm:ss")
 

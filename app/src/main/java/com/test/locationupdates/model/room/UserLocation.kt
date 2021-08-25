@@ -10,8 +10,8 @@ import java.util.*
 @Entity(tableName = "user_location")
 data class UserLocation(
     @PrimaryKey(autoGenerate = true)
-     var id: Int,
-     var  longitude: String,
-     var  latitude: String,
-     var  date: Date = Date()
-    ): Parcelable
+    var id: Int,
+    var latitude: String,
+    var longitude: String,
+    var date: Date = Date()
+) : Parcelable
