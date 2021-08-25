@@ -5,6 +5,7 @@ import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Location
 import android.os.Build
 import android.os.IBinder
 import android.os.Looper
@@ -24,10 +25,7 @@ import com.test.locationupdates.model.room.UserLocationDao
 import com.test.locationupdates.viewmodel.LocationViewModel
 import com.test.locationupdates.viewmodel.LocationViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import java.util.*
 
 class LocationService: Service() {
@@ -47,8 +45,8 @@ class LocationService: Service() {
     private lateinit var fusedLocationClient1: FusedLocationProviderClient
     private lateinit var fusedLocationClient2: FusedLocationProviderClient
 
-    private val job = SupervisorJob()
-    private val scope = CoroutineScope(Dispatchers.Main + job)
+    private lateinit var job : Job
+    private lateinit var scope : CoroutineScope
 
     companion object{
         var requestingLocation = false
@@ -62,8 +60,10 @@ class LocationService: Service() {
     override fun onCreate() {
 
         super.onCreate()
-        Log.d(TAG, "onCreate: ")
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        job = SupervisorJob()
+        scope = CoroutineScope(Dispatchers.Main + job)
 
         locationDao = LocationDb.getInstance(applicationContext).locationDao()
         locationRepo = LocationRepo(locationDao)
@@ -82,27 +82,9 @@ class LocationService: Service() {
                 locationResult ?: return
                 requestingLocation  = true
                 var location = locationResult.lastLocation
-                Log.d(TAG, "onLocationResult1: "+location)
-                notificationManager.notify(NOTIFICATION_ID, createNotification(""+location.latitude+"  "+location.longitude))
 
-
-                val userLocation = UserLocation(0, location.latitude.toString(), location.latitude.toString())
-
-
-                //the life of the scope is until onDestroy gets called
-                scope.launch() {
-                    locationRepo.addLocation(userLocation)
-                }
-
-
-
+                updateLocation(location)
             }
-            override fun onLocationAvailability(p0: LocationAvailability) {
-                super.onLocationAvailability(p0)
-            }
-
-
-
         }
 
         locationCallback2 = object: LocationCallback(){
@@ -110,12 +92,23 @@ class LocationService: Service() {
                 locationResult ?: return
                 requestingLocation  = true
                 val location = locationResult.lastLocation
-                Log.d(TAG, "onLocationResult2: "+location)
-            }
-            override fun onLocationAvailability(p0: LocationAvailability) {
-                super.onLocationAvailability(p0)
+                updateLocation(location)
             }
         }
+
+    }
+
+    private fun updateLocation(location: Location) {
+
+        notificationManager.notify(NOTIFICATION_ID, createNotification(""+location.latitude+"  "+location.longitude))
+
+        val userLocation = UserLocation(0, location.latitude.toString(), location.longitude.toString())
+
+        //the life of the scope is until onDestroy gets called
+        scope.launch() {
+            locationRepo.addLocation(userLocation)
+        }
+
 
     }
 
